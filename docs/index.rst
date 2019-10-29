@@ -68,7 +68,9 @@ Manual Installation
         - ``deactivate or source deactivate``
         - ``.\venv\Scripts\activate``
         - ``python manage.py createsuperuser``
-
+- Within the tutorial, the projects and blog were setup using the command line tool.   This isn't 
+  necessary for the website to work, but makes it more appealing.   Please see the following link:
+    - https://realpython.com/get-started-with-django-1/
 
 MakeFile Installation (Mac, Linux or Unix)
 ------------------------------------------   
@@ -82,7 +84,9 @@ This project was written and tested on a mac and it has not been tested on Linux
     - Run 'make venv-migrations' to migrate models.
 - To create a superuser for the admin site:
     - Run 'make venv-admin'
-
+- Within the tutorial, the projects and blog were setup using the command line tool.   This isn't 
+  necessary for the website to work, but makes it more appealing.   Please see the following link:
+    - https://realpython.com/get-started-with-django-1/
     
 Running the Application
 =======================
