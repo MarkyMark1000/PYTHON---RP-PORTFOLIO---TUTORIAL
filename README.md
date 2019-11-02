@@ -9,4 +9,4 @@ You need to test the site using links similar to the following:
   - http://localhost:8000/admin/
   - http://localhost:8000/projects/
 
-We need to add a way to catch errors, which is mentioned, but not covered in the tutorial.
+We need to add a way to test catch errors, which is mentioned, but not covered in the tutorial.

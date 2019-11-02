@@ -50,13 +50,17 @@ Manual Installation
     - Mac:
         - ``deactivate or source deactivate``
         - ``source venv/bin/activate``
-        - ``python manage.py makemigrations polls``
+        - ``python manage.py makemigrations personal_portfolio``
+        - ``python manage.py makemigrations projects``
+        - ``python manage.py makemigrations blog``
         - ``python manage.py check``
         - ``python manage.py migrate``
     - Windows:
         - ``deactivate or source deactivate``
         - ``.\venv\Scripts\activate``
-        - ``python manage.py makemigrations polls``
+        - ``python manage.py makemigrations personal_portfoliop``
+        - ``python manage.py makemigrations projects``
+        - ``python manage.py makemigrations blog``
         - ``python manage.py check``
         - ``python manage.py migrate``
 - You can setup a superuser account for the admin part of the Django polls app using the following:
@@ -70,7 +74,8 @@ Manual Installation
         - ``python manage.py createsuperuser``
 - Within the tutorial, the projects and blog were setup using the command line tool.   This isn't 
   necessary for the website to work, but makes it more appealing.   Please see the following link:
-    - https://realpython.com/get-started-with-django-1/
+
+    https://realpython.com/get-started-with-django-1/
 
 MakeFile Installation (Mac, Linux or Unix)
 ------------------------------------------   
@@ -86,7 +91,8 @@ This project was written and tested on a mac and it has not been tested on Linux
     - Run 'make venv-admin'
 - Within the tutorial, the projects and blog were setup using the command line tool.   This isn't 
   necessary for the website to work, but makes it more appealing.   Please see the following link:
-    - https://realpython.com/get-started-with-django-1/
+
+    https://realpython.com/get-started-with-django-1/
     
 Running the Application
 =======================
@@ -104,7 +110,8 @@ Manual
         - ``.\venv\Scripts\activate``
         - ``python manage.py runserver``
     - Please note that the standard localhost is not a valid website that produces html.   You will need to use:
-        - ``http://localhost/polls/``
+        - ``http://localhost/projects/``
+        - ``http://localhost/blog/``
         - ``http://localhost/admin/``
 
 MakeFile
@@ -116,24 +123,7 @@ MakeFile
 Testing the Application
 =======================
 
-Manual
-------
-
-- To run a basic test:
-    - Mac:
-        - ``deactivate or source deactivate``
-        - ``source venv/bin/activate``
-        - ``python manage.py test polls``
-    - Windows:
-        - ``deactivate or source deactivate``
-        - ``.\venv\Scripts\activate``
-        - ``python manage.py test polls``
-
-MakeFile
---------
-
-- To run a basic test:
-    - Run 'make venv-test' to run test in venv virtual environment.
+DANGER:   Currently there are no tests associated with this project.   They were not part of the tutorial.
 
 Test Coding Standards
 =====================
@@ -141,20 +131,29 @@ Test Coding Standards
 Manual
 ------
 
-- Test the code within the mysite directory:
+- Test the code within the personal_portfolio directory:
     - Mac:
         - ``deactivate or source deactivate``
         - ``source venv/bin/activate``
-        - ``pycodestyle --statistics ./mysite/*.py``
+        - ``pycodestyle --statistics ./personal_portfolio/*.py``
     - Windows:
         - ``deactivate or source deactivate``
         - ``.\venv\Scripts\activate``
         - ``pycodestyle --statistics filename.py``
-- Test the code within the polls directory:
+- Test the code within the projects directory:
     - Mac:
         - ``deactivate or source deactivate``
         - ``source venv/bin/activate``
-        - ``pycodestyle --statistics ./polls/*.py``
+        - ``pycodestyle --statistics ./projects/*.py``
+    - Windows:
+        - ``deactivate or source deactivate``
+        - ``.\venv\Scripts\activate``
+        - ``pycodestyle --statistics filename.py``
+- Test the code within the blog directory:
+    - Mac:
+        - ``deactivate or source deactivate``
+        - ``source venv/bin/activate``
+        - ``pycodestyle --statistics ./blog/*.py``
     - Windows:
         - ``deactivate or source deactivate``
         - ``.\venv\Scripts\activate``
@@ -163,11 +162,14 @@ Manual
 MakeFile
 --------
 
-- Test the code within the flaskr directory:
-    - Run 'make pystat-mysite'
+- Test the code within the personal_portfolio directory:
+    - Run 'make pystat-pp'
 
-- Test the code within the tests directory:
-    - Run 'make pystat-polls'
+- Test the code within the projects directory:
+    - Run 'make pystat-projects'
+
+- Test the code within the blog directory:
+    - Run 'make pystat-blog'
 
 Cleanup
 =======
@@ -175,13 +177,19 @@ Cleanup
 Manual
 ------
 
-- The flaskr app can become cluttered with a number of directories and files.   The following can be used to clean them up:
+- The project can become cluttered with a number of directories and files.   The following can be used to clean them up:
     - Mac:
-        - ``rm -rf ./mysite/__pycache__*``
-        - ``rm -rf ./polls/__pycache__*``
+        - ``rm -rf ./personal_portfolio/__pycache__*``
+        - ``rm -rf ./projects/__pycache__*``
+        - ``rm -rf ./projects/migrations/__pycache__*``
+        - ``rm -rf ./blog/__pycache__*``
+        - ``rm -rf ./blog/migrations/__pycache__*``
     - Windows:
-        - ``rmdir /S mysite\__pycache__``
-        - ``rmdir /S polls\__pycache__``
+        - ``rmdir /S personal_portfolio\__pycache__``
+        - ``rmdir /S projects\__pycache__``
+        - ``rmdir /S projects\migrations\__pycache__``
+        - ``rmdir /S blog\__pycache__``
+        - ``rmdir /S blog\migrations\__pycache__``
 
 - If you wish to remove the venv virtual environment directory:
     - ``rm -rf venv``
